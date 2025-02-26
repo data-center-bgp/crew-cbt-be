@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"quiz-crew/config"
-	"quiz-crew/models"
 	"quiz-crew/routes"
 
 	"github.com/gofiber/fiber/v2"
@@ -12,8 +11,7 @@ import (
 
 func main() {
 	config.ConnectDB()
-
-	models.Migrate()
+	defer config.CloseDB()
 
 	app := fiber.New()
 
