@@ -30,16 +30,16 @@ DB_SSLMODE=disable
 
 ## User Management
 
-- `POST /api/user/register` - Register new crew for taking CBT
-- `GET /api/user/:nik` - Get crew quiz results based by NIK
+- `POST /api/crew_cbt/user/register` - Register new crew for taking CBT
+- `GET /api/crew_cbt/user/:nik` - Get crew quiz results based by NIK
 
 ## CBT Management
 
-- `GET /api/quiz/categories` - Get all quiz categories
-- `GET /api/quiz/categories/:id` - Get questions for specific category
-- `POST /api/quiz/submit` - Submit quiz answers
-- `POST /api/quiz/createCategory` - Create new quiz category
-- `POST /api/quiz/createQuestion` - Create new quiz question
+- `GET /api/crew_cbt/quiz/categories` - Get all quiz categories
+- `GET /api/crew_cbt/quiz/categories/:id` - Get questions for specific category
+- `POST /api/crew_cbt/quiz/submit` - Submit quiz answers
+- `POST /api/crew_cbt/quiz/createCategory` - Create new quiz category
+- `POST /api/crew_cbt/quiz/createQuestion` - Create new quiz question
 
 # Running the application
 
