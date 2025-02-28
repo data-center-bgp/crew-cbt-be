@@ -17,7 +17,7 @@ func main() {
 
 	app.Use(cors.New(cors.Config{
 		AllowOrigins:     "http://localhost:5173, https://images.barokahperkasagroup.id",
-		AllowMethods:     "GET, POST, PUT, PATCH, DELETE",
+		AllowMethods:     "GET, POST, PUT, PATCH, DELETE, OPTIONS",
 		AllowHeaders:     "Origins, Content-Type, Accept, Authorization",
 		AllowCredentials: true,
 		ExposeHeaders:    "Content-Length, Content-Type",
