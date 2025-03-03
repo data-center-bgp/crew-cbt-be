@@ -16,7 +16,7 @@ func main() {
 	app := fiber.New()
 
 	app.Use(cors.New(cors.Config{
-		AllowOrigins:     "http://localhost:5173, https://images.barokahperkasagroup.id",
+		AllowOrigins:     "http://localhost:5173, https://crew-cbt.barokahperkasagroup.id, https://images.barokahperkasagroup.id",
 		AllowMethods:     "GET, POST, PUT, PATCH, DELETE, OPTIONS",
 		AllowHeaders:     "Origins, Content-Type, Accept, Authorization",
 		AllowCredentials: true,
