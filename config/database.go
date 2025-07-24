@@ -36,7 +36,13 @@ func ConnectDB() {
 	)
 
 	// Test connection with pgx
-	pgxConn, err := pgx.Connect(context.Background(), databaseUrl)
+	cfg, err := pgx.ParseConfig(databaseUrl)
+	if err != nil {
+		log.Fatal("Failed to parse pgx config: ", err)
+	}
+	cfg.DefaultQueryExecMode = pgx.QueryExecModeSimpleProtocol // ✅ Disable prepared statements
+
+	pgxConn, err := pgx.ConnectConfig(context.Background(), cfg)
 	if err != nil {
 		log.Fatal("Failed to connect with pgx: ", err)
 	}
